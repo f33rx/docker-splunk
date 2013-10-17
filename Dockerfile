@@ -18,7 +18,7 @@ RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noar
 ADD http://www.splunk.com/page/download_track?file=6.0/splunk/linux/splunk-6.0-182037-linux-2.6-x86_64.rpm&platform=Linux&architecture=x86_64&version=6.0&typed=release&name=linux_installer&d=pro&elq=dc39e7f3-1909-4410-a034-58d8e273fe67 /tmp/
 
 # use default install /opt/splunk
-RUN yum --nogpgcheck localinstall /tmp/splunk-6.0-182037-linux-2.6-x86_64.rpm 
+RUN yum -y --nogpgcheck localinstall /tmp/splunk-6.0-182037-linux-2.6-x86_64.rpm 
 
 # Remove yum metadata.
 RUN yum clean all
