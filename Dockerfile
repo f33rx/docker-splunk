@@ -32,4 +32,4 @@ RUN /tmp/install.sh
 # RUN /opt/splunk/bin/ ./splunk add licenses /opt/splunk/etc/licenses/enterprise/enterprise.lic
 
 # Start splunk and accept the free license
-./splunk start --accept-license
+RUN /opt/splunk/bin/ ./splunk start --accept-license
